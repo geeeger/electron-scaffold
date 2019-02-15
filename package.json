@@ -3,24 +3,25 @@
   "version": "0.1.0",
   "private": true,
   "main": "build/electron.js",
+  "homepage": "./",
   "dependencies": {
-    "electron-log": "^3.0.1",
-    "react": "^16.8.1",
-    "react-dom": "^16.8.1"
+    "electron-log": "3.0.1"
   },
   "devDependencies": {
-    "@craco/craco": "^3.4.1",
+    "@craco/craco": "3.4.1",
     "@types/electron": "^1.6.10",
     "@types/jest": "^24.0.4",
     "@types/node": "^11.9.3",
     "@types/react": "^16.8.3",
     "@types/react-dom": "^16.8.1",
-    "electron": "^4.0.4",
-    "electron-builder": "^20.38.5",
+    "electron": "4.0.4",
+    "electron-builder": "20.38.5",
     "react-scripts": "2.1.5",
     "rimraf": "^2.6.3",
-    "tsc-watch": "^1.1.39",
-    "typescript": "^3.3.3"
+    "tsc-watch": "1.1.39",
+    "typescript": "3.3.3",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1"
   },
   "scripts": {
     "start:renderer": "craco start",
@@ -28,10 +29,17 @@
     "build:main": "tsc -p tsconfig.main.json",
     "build": "rimraf build && npm run build:renderer && npm run build:main",
     "build:main-watch": "tsc -p tsconfig.main.json -w",
-    "start": "npm run build && electron build/electron.js",
+    "start": "npm run build && electron .",
     "test": "craco test",
-    "start:main": "ELECTRON_START_URL=http://127.0.0.1:3000 electron build/electron.js --debug --enable-logging",
-    "dev": "node ./scripts/dev"
+    "start:main": "ELECTRON_START_URL=http://127.0.0.1:3000 electron . --debug --enable-logging",
+    "dev": "node ./scripts/dev",
+    "pack": "npm run build && electron-builder",
+    "pack:win": "npm run build && electron-builder --win",
+    "pack:x64": "npm run build && electron-builder --x64",
+    "pack:ia32": "npm run build && electron-builder --ia32",
+    "pack:linux": "npm run build && electron-builder --linux",
+    "pack:armv7l": "npm run build && electron-builder --armv7l",
+    "pack:arm64": "npm run build && electron-builder --arm64"
   },
   "eslintConfig": {
     "extends": "react-app"

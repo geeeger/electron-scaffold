@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+const fs = require('fs');
+
+console.log(fs);
+
 class App extends Component {
   render() {
     return (
