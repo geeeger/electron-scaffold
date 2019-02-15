@@ -2,7 +2,7 @@
   "name": "electron-scaffold",
   "version": "0.1.0",
   "private": true,
-  "main": "build/app/enter.js",
+  "main": "build/electron.js",
   "dependencies": {
     "electron-log": "^3.0.1",
     "react": "^16.8.1",
@@ -28,9 +28,9 @@
     "build:main": "tsc -p tsconfig.main.json",
     "build": "rimraf build && npm run build:renderer && npm run build:main",
     "build:main-watch": "tsc -p tsconfig.main.json -w",
-    "start": "npm run build && electron build/app/entry.js",
+    "start": "npm run build && electron build/electron.js",
     "test": "craco test",
-    "start:main": "ELECTRON_START_URL=http://127.0.0.1:3000 electron build/app/entry.js --debug --enable-logging",
+    "start:main": "ELECTRON_START_URL=http://127.0.0.1:3000 electron build/electron.js --debug --enable-logging",
     "dev": "node ./scripts/dev"
   },
   "eslintConfig": {
