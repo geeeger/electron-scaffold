@@ -2,10 +2,15 @@
 import {app, BrowserWindow} from 'electron';
 import url from 'url';
 import path from 'path';
+import A from './b';
+import * as log from 'electron-log';
+
+console.log(log)
+new A();
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
-let mainWindow
+let mainWindow: any
 
 function createWindow () {
   // Create the browser window.
@@ -17,16 +22,16 @@ function createWindow () {
     }
   })
 
-  console.log(1);
+  console.log(123214)
+
 
   // and load the index.html of the app.
   // mainWindow.loadFile('index.html')
-  const startUrl = process.env.ELECTRON_START_URL || url.format({
-    pathname: path.join(__dirname, '/build/index.html'),
-    protocol: 'file:',
-    slashes: true
-  });
-  mainWindow.loadURL(startUrl);
+  if (process.env.ELECTRON_START_URL) {
+    mainWindow.loadURL(process.env.ELECTRON_START_URL);
+  } else {
+    mainWindow.loadFile('build/index.html')
+  }
 
   // Open the DevTools.
   mainWindow.webContents.openDevTools();

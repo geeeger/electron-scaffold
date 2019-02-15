@@ -2,13 +2,9 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-declare global {
-  interface Window {
-    [key: string]: any;
-  }
-}
+const fs = require('fs');
 
-const fs = window.require('fs');
+console.log(fs);
 
 class App extends Component {
   render() {
