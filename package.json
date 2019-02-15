@@ -1,0 +1,38 @@
+{
+  "name": "electron-scaffold",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./build/main/enter.js",
+  "homepage": "./",
+  "dependencies": {
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1",
+    "react-scripts": "2.1.5"
+  },
+  "devDependencies": {
+    "@types/electron": "^1.6.10",
+    "@types/jest": "^24.0.4",
+    "@types/node": "^11.9.3",
+    "@types/react": "^16.8.3",
+    "@types/react-dom": "^16.8.1",
+    "electron": "^4.0.4",
+    "tsc-watch": "^1.1.39",
+    "typescript": "^3.3.3"
+  },
+  "scripts": {
+    "start:renderer": "react-scripts start",
+    "build:renderer": "react-scripts build",
+    "build:main": "tsc -p tsconfig.main.json",
+    "build:main-watch": "tsc -p tsconfig.main.json -w",
+    "test": "react-scripts test",
+    "start:main": "ELECTRON_START_URL=http://127.0.0.1:3000 electron build/main/entry.js",
+    "dev": "node ./scripts/dev",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    "chrome >= 70"
+  ]
+}
