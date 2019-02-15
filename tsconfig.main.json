@@ -1,20 +1,9 @@
 {
+    "extends": "./tsconfig.json",
     "compilerOptions": {
-        "outDir": "./build/main",
-        "sourceMap": true,
-        "moduleResolution": "node",
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "esModuleInterop": true,
-        "target": "es6",
-        "module": "commonjs",
-        "typeRoots": [
-            "./node_modules/@types"
-        ],
-        "lib": [
-            "dom",
-            "esnext"
-        ]
+        "outDir": "./build/app",
+        "noEmit": false,
+        "module": "commonjs"
     },
     "include": [
         "main"

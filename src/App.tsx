@@ -2,14 +2,6 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-declare global {
-  interface Window {
-    [key: string]: any;
-  }
-}
-
-const fs = window.require('fs');
-
 class App extends Component {
   render() {
     return (

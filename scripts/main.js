@@ -17,6 +17,16 @@ function startElectron() {
     ], {
         cwd: __dirname
     });
+
+    mainProcess.stdout.on('data', data => {
+        let str = data.toString();
+        console.log(chalk.green(str));
+    });
+
+    mainProcess.stderr.on('data', data => {
+        let str = data.toString();
+        console.log(chalk.red(str));
+    });
 }
 
 module.exports = function startMain() {
@@ -33,7 +43,9 @@ module.exports = function startMain() {
         });
         
         watch.on('compile_errors', (e) => {
-            console.log(chalk.red(e.toString()));
+            if (e) {
+                console.log(chalk.red(e.toString()));
+            }
             // Your code goes here...
         });
         
