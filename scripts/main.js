@@ -1,6 +1,7 @@
 const { spawn } = require('child_process');
 const TscWatchClient = require('tsc-watch/client');
 const chalk = require('chalk');
+const npm = require('./npm.js');
 const watch = new TscWatchClient.constructor();
 
 let mainProcess;
@@ -11,7 +12,7 @@ function startElectron() {
         mainProcess.kill();
         mainProcess = null;
     }
-    mainProcess = spawn('npm', [
+    mainProcess = spawn(npm, [
         "run",
         "start:main"
     ], {
