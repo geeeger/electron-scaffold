@@ -1,10 +1,11 @@
 const { spawn } = require('child_process');
 const chalk = require('chalk');
+const npm = require('./npm.js');
 
 let started;
 module.exports = function startRenderer() {
     return new Promise((resolve) => {
-        const rendererProcess = spawn('npm', [
+        const rendererProcess = spawn(npm, [
             "run",
             "start:renderer"
         ]);
