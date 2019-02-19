@@ -3,7 +3,8 @@
     "compilerOptions": {
         "outDir": "./build",
         "noEmit": false,
-        "module": "commonjs"
+        "module": "commonjs",
+        "sourceMap": true
     },
     "include": [
         "main"

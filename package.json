@@ -31,7 +31,7 @@
     "build:main-watch": "tsc -p tsconfig.main.json -w",
     "start": "npm run build && electron .",
     "test": "craco test",
-    "start:main": "setELECTRON_START_URL=http://127.0.0.1:3000 && electron . --debug --enable-logging",
+    "start:main": "set ELECTRON_START_URL=http://127.0.0.1:3000 && electron . --debug --enable-logging",
     "dev": "node ./scripts/dev",
     "pack": "npm run build && electron-builder",
     "pack:win": "npm run build && electron-builder --win",
