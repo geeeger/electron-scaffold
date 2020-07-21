@@ -16,7 +16,7 @@
     "@types/react-dom": "^16.8.1",
     "electron": "9.1.0",
     "electron-builder": "20.38.5",
-    "react-scripts": "2.1.5",
+    "react-scripts": "3.4.1",
     "rimraf": "^2.6.3",
     "tsc-watch": "1.1.39",
     "typescript": "3.3.3",
