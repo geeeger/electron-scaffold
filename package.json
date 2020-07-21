@@ -8,18 +8,18 @@
     "electron-log": "4.2.2"
   },
   "devDependencies": {
-    "@craco/craco": "3.4.1",
+    "@craco/craco": "5.6.4",
     "@types/electron": "^1.6.10",
-    "@types/jest": "^24.0.4",
+    "@types/jest": "^26.0.5",
     "@types/node": "^14.0.23",
     "@types/react": "^16.8.3",
     "@types/react-dom": "^16.8.1",
     "electron": "9.1.0",
-    "electron-builder": "20.38.5",
+    "electron-builder": "22.7.0",
     "react-scripts": "3.4.1",
-    "rimraf": "^2.6.3",
+    "rimraf": "^3.0.2",
     "tsc-watch": "4.2.9",
-    "typescript": "3.3.3",
+    "typescript": "3.9.7",
     "react": "^16.8.1",
     "react-dom": "^16.8.1"
   },
