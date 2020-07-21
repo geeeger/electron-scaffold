@@ -5,18 +5,18 @@
   "main": "build/electron.js",
   "homepage": "./",
   "dependencies": {
-    "electron-log": "3.0.1"
+    "electron-log": "4.2.2"
   },
   "devDependencies": {
     "@craco/craco": "3.4.1",
     "@types/electron": "^1.6.10",
     "@types/jest": "^24.0.4",
-    "@types/node": "^11.9.3",
+    "@types/node": "^14.0.23",
     "@types/react": "^16.8.3",
     "@types/react-dom": "^16.8.1",
     "electron": "9.1.0",
     "electron-builder": "22.7.0",
-    "react-scripts": "2.1.5",
+    "react-scripts": "3.4.1",
     "rimraf": "^2.6.3",
     "tsc-watch": "1.1.39",
     "typescript": "3.3.3",
