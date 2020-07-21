@@ -17,7 +17,7 @@
     "electron": "9.1.0",
     "electron-builder": "22.7.0",
     "react-scripts": "3.4.1",
-    "rimraf": "^2.6.3",
+    "rimraf": "^3.0.2",
     "tsc-watch": "1.1.39",
     "typescript": "3.3.3",
     "react": "^16.8.1",
