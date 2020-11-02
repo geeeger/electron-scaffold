@@ -5,7 +5,7 @@
   "main": "build/electron.js",
   "homepage": "./",
   "dependencies": {
-    "electron-log": "4.2.4"
+    "electron-log": "4.3.0"
   },
   "devDependencies": {
     "@craco/craco": "5.7.0",
