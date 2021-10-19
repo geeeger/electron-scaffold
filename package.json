@@ -10,7 +10,7 @@
   "devDependencies": {
     "@craco/craco": "6.2.0",
     "@types/electron": "1.6.10",
-    "@types/jest": "26.0.23",
+    "@types/jest": "27.0.2",
     "@types/node": "14.17.4",
     "@types/react": "17.0.13",
     "@types/react-dom": "17.0.8",
